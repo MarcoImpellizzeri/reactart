@@ -29,6 +29,18 @@ const Input = styled.input`
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 `
 
+const Button = styled.button`
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+    background-color: #f0b322;
+    color: #1f2937;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: #f0920e;
+    }
+`
+
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('')
   const [enteredPassword, setEnteredPassword] = useState('')
@@ -78,11 +90,11 @@ export default function AuthInputs() {
         >
           Create a new account
         </button>
-        <button
+        <Button
           className="button"
           onClick={handleLogin}
         >Sign In
-        </button>
+        </Button>
       </div>
     </div>
   )
